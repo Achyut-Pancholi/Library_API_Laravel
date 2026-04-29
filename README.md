@@ -44,11 +44,19 @@ A complete, production-quality RESTful API for a Library Management System built
    - 10 Fake Authors
    - 30 Fake Books (randomly assigned to authors)
 
-6. **Serve the Application**
+6. **Serve the API**
    ```bash
    php artisan serve
    ```
-   The API will be available at `http://localhost:8000`.
+   The API will be available at `http://127.0.0.1:8000`.
+
+7. **Serve the Frontend**
+   Open a **second terminal** window, navigate to the `php_frontend` folder, and use the built-in PHP server:
+   ```bash
+   cd php_frontend
+   php -S 127.0.0.1:8001
+   ```
+   Access the beautiful glassmorphism frontend at `http://127.0.0.1:8001`.
 
 ## Admin Credentials (Seeded)
 
