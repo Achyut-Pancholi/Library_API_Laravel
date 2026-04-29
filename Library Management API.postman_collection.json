@@ -1,0 +1,1659 @@
+{
+  "info": {
+    "_postman_id": "955f6cde-f633-4836-8462-516111637a2a",
+    "name": "Library Management API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54363737",
+    "_collection_link": "https://go.postman.co/collection/54363737-955f6cde-f633-4836-8462-516111637a2a?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Register",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"John Doe\",\n    \"email\": \"johndoe@example.com\",\n    \"password\": \"password\",\n    \"password_confirmation\": \"password\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/register",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "register"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Register",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"name\": \"John Doe\",\n    \"email\": \"johndoe@example.com\",\n    \"password\": \"password\",\n    \"password_confirmation\": \"password\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/register",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "register"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.19"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Apr 2026 06:50:49 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"User registered successfully\",\n    \"data\": {\n        \"user\": {\n            \"name\": \"John Doe\",\n            \"email\": \"johndoe@example.com\",\n            \"updated_at\": \"2026-04-28T06:50:49.000000Z\",\n            \"created_at\": \"2026-04-28T06:50:49.000000Z\",\n            \"id\": 2\n        },\n        \"token\": \"2|HoYjZrq6ad5w3c0A5iuM0vGbqywZVItioGwK0TDWf8890ae5\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"admin@example.com\",\n    \"password\": \"password\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "login"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Login",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"email\": \"admin@example.com\",\n    \"password\": \"password\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/login",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "login"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.19"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Apr 2026 06:48:12 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"User logged in successfully\",\n    \"data\": {\n        \"token\": \"1|W7unRn1OmZnv1GYwhjMXeaVscfuZ9jMol2ZdhZDF5bbf3579\"\n    }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Authors",
+      "item": [
+        {
+          "name": "Get Authors",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/authors",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "authors"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get Authors",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/authors",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "authors"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.19"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Apr 2026 06:51:51 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Andreane Kunze Jr.\",\n            \"bio\": \"Dolores tenetur quibusdam incidunt delectus exercitationem itaque saepe. Ea atque quibusdam aperiam tenetur incidunt iusto aperiam. Et magni sunt numquam quae. Incidunt dolor voluptas omnis ea molestiae doloribus.\",\n            \"nationality\": \"Turks and Caicos Islands\",\n            \"born_year\": 1979,\n            \"books_count\": 3\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Ebba Walsh\",\n            \"bio\": \"Sint labore qui commodi fugit nostrum repellat velit. Beatae nemo quo id omnis. Qui aut aliquid nesciunt quo culpa harum optio aut. Corrupti facilis reprehenderit molestiae temporibus totam.\",\n            \"nationality\": \"Norfolk Island\",\n            \"born_year\": 2025,\n            \"books_count\": 2\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Gideon Leannon\",\n            \"bio\": \"Sit asperiores tempore ducimus nisi accusantium non maxime. Id iste eaque error necessitatibus sapiente. Odio architecto fuga eum. Unde doloribus laboriosam minus dolor quas enim.\",\n            \"nationality\": \"New Zealand\",\n            \"born_year\": 1990,\n            \"books_count\": 5\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Shaun Nitzsche\",\n            \"bio\": \"Odio sint vero vel aspernatur iure sint. Est facere magnam commodi laborum autem. Error natus neque necessitatibus et nesciunt aut. Quo id necessitatibus tempora non quia maiores.\",\n            \"nationality\": \"Cote d'Ivoire\",\n            \"born_year\": 2012,\n            \"books_count\": 4\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Prof. Evan Goodwin\",\n            \"bio\": \"Deserunt non magni vel sunt dolorum ullam qui voluptatibus. Ut ex nam temporibus sed nulla reiciendis. Beatae cumque numquam et quidem nesciunt accusamus consequatur. Et doloremque est ea sed. Neque odit id debitis quam perferendis rerum voluptates.\",\n            \"nationality\": \"Japan\",\n            \"born_year\": 1998,\n            \"books_count\": 4\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Miss Michele King Sr.\",\n            \"bio\": \"Eaque molestiae officiis qui porro doloremque quae voluptatem. Earum expedita modi et iure.\",\n            \"nationality\": \"Qatar\",\n            \"born_year\": 2014,\n            \"books_count\": 1\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Maverick D'Amore\",\n            \"bio\": \"Blanditiis non minima ut error eum consequatur sint. Quibusdam placeat quod perspiciatis itaque tempora. Magnam illum cupiditate voluptate.\",\n            \"nationality\": \"Ireland\",\n            \"born_year\": 1997,\n            \"books_count\": 4\n        },\n        {\n            \"id\": 8,\n            \"name\": \"Gussie Schimmel\",\n            \"bio\": \"Est nesciunt saepe qui totam et. Saepe aliquid repellat inventore ea ut dignissimos. Voluptates nihil et ea unde dolorem.\",\n            \"nationality\": \"Togo\",\n            \"born_year\": 2021,\n            \"books_count\": 3\n        },\n        {\n            \"id\": 9,\n            \"name\": \"Bonnie Hand\",\n            \"bio\": \"Voluptas fugiat qui impedit nobis odit. Culpa id id sapiente provident. Eos molestiae autem vel quia eos debitis qui. Quae exercitationem tempora et enim.\",\n            \"nationality\": \"Angola\",\n            \"born_year\": 1975,\n            \"books_count\": 2\n        },\n        {\n            \"id\": 10,\n            \"name\": \"Kayleigh Murray\",\n            \"bio\": \"Fuga excepturi placeat sit odit et ut vitae. Laboriosam dolores architecto omnis perspiciatis est. Nulla nulla dolores iste ex ea in. Qui rerum provident alias atque sed ut. Quas repellendus nihil dignissimos architecto tempora nihil architecto.\",\n            \"nationality\": \"Belgium\",\n            \"born_year\": 1988,\n            \"books_count\": 2\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://localhost:8000/api/authors?page=1\",\n        \"last\": \"http://localhost:8000/api/authors?page=1\",\n        \"prev\": null,\n        \"next\": null\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 1,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"page\": null,\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/authors?page=1\",\n                \"label\": \"1\",\n                \"page\": 1,\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"page\": null,\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://localhost:8000/api/authors\",\n        \"per_page\": 10,\n        \"to\": 10,\n        \"total\": 10\n    },\n    \"success\": true,\n    \"message\": \"Authors retrieved successfully\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Create Author",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"J.K. Rowling\",\n    \"bio\": \"British author\",\n    \"nationality\": \"British\",\n    \"born_year\": 1965\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/authors",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "authors"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Create Author",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"name\": \"J.K. Rowling\",\n    \"bio\": \"British author\",\n    \"nationality\": \"British\",\n    \"born_year\": 1965\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/authors",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "authors"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.19"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Apr 2026 06:52:15 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"data\": {\n        \"id\": 11,\n        \"name\": \"J.K. Rowling\",\n        \"bio\": \"British author\",\n        \"nationality\": \"British\",\n        \"born_year\": 1965\n    },\n    \"success\": true,\n    \"message\": \"Author created successfully\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get Author",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/authors/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "authors",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get Author",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/authors/1",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "authors",
+                    "1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.19"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Apr 2026 06:52:37 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Andreane Kunze Jr.\",\n        \"bio\": \"Dolores tenetur quibusdam incidunt delectus exercitationem itaque saepe. Ea atque quibusdam aperiam tenetur incidunt iusto aperiam. Et magni sunt numquam quae. Incidunt dolor voluptas omnis ea molestiae doloribus.\",\n        \"nationality\": \"Turks and Caicos Islands\",\n        \"born_year\": 1979,\n        \"books\": [\n            {\n                \"id\": 5,\n                \"title\": \"Voluptas incidunt voluptates veritatis.\",\n                \"isbn\": \"9796494645292\",\n                \"genre\": \"neque\",\n                \"published_year\": 2024,\n                \"total_copies\": 7\n            },\n            {\n                \"id\": 15,\n                \"title\": \"Aliquid omnis id.\",\n                \"isbn\": \"9799353074608\",\n                \"genre\": \"expedita\",\n                \"published_year\": 2024,\n                \"total_copies\": 19\n            },\n            {\n                \"id\": 30,\n                \"title\": \"Ea atque vero praesentium.\",\n                \"isbn\": \"9787939226312\",\n                \"genre\": \"placeat\",\n                \"published_year\": 2012,\n                \"total_copies\": 19\n            }\n        ]\n    },\n    \"success\": true,\n    \"message\": \"Author retrieved successfully\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update Author",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"J.K. Rowling Updated\",\n    \"bio\": \"British author updated\",\n    \"nationality\": \"British\",\n    \"born_year\": 1965\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/authors/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "authors",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update Author",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"name\": \"J.K. Rowling Updated\",\n    \"bio\": \"British author updated\",\n    \"nationality\": \"British\",\n    \"born_year\": 1965\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/authors/1",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "authors",
+                    "1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.19"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Apr 2026 06:53:02 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"J.K. Rowling Updated\",\n        \"bio\": \"British author updated\",\n        \"nationality\": \"British\",\n        \"born_year\": 1965\n    },\n    \"success\": true,\n    \"message\": \"Author updated successfully\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete Author",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/authors/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "authors",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Delete Author",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/authors/1",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "authors",
+                    "1"
+                  ]
+                }
+              },
+              "status": "Unprocessable Content",
+              "code": 422,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.19"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Apr 2026 06:54:36 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"message\": \"Cannot delete author with existing books\"\n}"
+            },
+            {
+              "name": "Delete Author",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/authors/13",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "authors",
+                    "13"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.19"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Apr 2026 07:07:30 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Author deleted successfully\",\n    \"data\": []\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Books",
+      "item": [
+        {
+          "name": "Get Books",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/books?available=true",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "books"
+              ],
+              "query": [
+                {
+                  "key": "available",
+                  "value": "true"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get Books",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/books?available=true",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "books"
+                  ],
+                  "query": [
+                    {
+                      "key": "available",
+                      "value": "true"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.19"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Apr 2026 07:07:51 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"data\": [\n        {\n            \"id\": 22,\n            \"title\": \"Autem odio sit molestias.\",\n            \"isbn\": \"9797274029844\",\n            \"genre\": \"et\",\n            \"published_year\": 1980,\n            \"total_copies\": 2,\n            \"author\": {\n                \"id\": 9,\n                \"name\": \"Bonnie Hand\",\n                \"bio\": \"Voluptas fugiat qui impedit nobis odit. Culpa id id sapiente provident. Eos molestiae autem vel quia eos debitis qui. Quae exercitationem tempora et enim.\",\n                \"nationality\": \"Angola\",\n                \"born_year\": 1975\n            }\n        },\n        {\n            \"id\": 23,\n            \"title\": \"Architecto dolorum nobis.\",\n            \"isbn\": \"9788728683064\",\n            \"genre\": \"animi\",\n            \"published_year\": 1985,\n            \"total_copies\": 3,\n            \"author\": {\n                \"id\": 5,\n                \"name\": \"Prof. Evan Goodwin\",\n                \"bio\": \"Deserunt non magni vel sunt dolorum ullam qui voluptatibus. Ut ex nam temporibus sed nulla reiciendis. Beatae cumque numquam et quidem nesciunt accusamus consequatur. Et doloremque est ea sed. Neque odit id debitis quam perferendis rerum voluptates.\",\n                \"nationality\": \"Japan\",\n                \"born_year\": 1998\n            }\n        },\n        {\n            \"id\": 24,\n            \"title\": \"Aspernatur ullam illo ipsum voluptatibus.\",\n            \"isbn\": \"9786212279045\",\n            \"genre\": \"aut\",\n            \"published_year\": 1998,\n            \"total_copies\": 2,\n            \"author\": {\n                \"id\": 8,\n                \"name\": \"Gussie Schimmel\",\n                \"bio\": \"Est nesciunt saepe qui totam et. Saepe aliquid repellat inventore ea ut dignissimos. Voluptates nihil et ea unde dolorem.\",\n                \"nationality\": \"Togo\",\n                \"born_year\": 2021\n            }\n        },\n        {\n            \"id\": 25,\n            \"title\": \"Sunt laboriosam officiis quidem.\",\n            \"isbn\": \"9788428342865\",\n            \"genre\": \"officia\",\n            \"published_year\": 1979,\n            \"total_copies\": 12,\n            \"author\": {\n                \"id\": 3,\n                \"name\": \"Gideon Leannon\",\n                \"bio\": \"Sit asperiores tempore ducimus nisi accusantium non maxime. Id iste eaque error necessitatibus sapiente. Odio architecto fuga eum. Unde doloribus laboriosam minus dolor quas enim.\",\n                \"nationality\": \"New Zealand\",\n                \"born_year\": 1990\n            }\n        },\n        {\n            \"id\": 26,\n            \"title\": \"Deserunt nisi nulla aperiam.\",\n            \"isbn\": \"9787157630373\",\n            \"genre\": \"pariatur\",\n            \"published_year\": 1991,\n            \"total_copies\": 10,\n            \"author\": {\n                \"id\": 2,\n                \"name\": \"Ebba Walsh\",\n                \"bio\": \"Sint labore qui commodi fugit nostrum repellat velit. Beatae nemo quo id omnis. Qui aut aliquid nesciunt quo culpa harum optio aut. Corrupti facilis reprehenderit molestiae temporibus totam.\",\n                \"nationality\": \"Norfolk Island\",\n                \"born_year\": 2025\n            }\n        },\n        {\n            \"id\": 27,\n            \"title\": \"Voluptatem nihil corrupti dolorem illum.\",\n            \"isbn\": \"9794964881034\",\n            \"genre\": \"fuga\",\n            \"published_year\": 1986,\n            \"total_copies\": 3,\n            \"author\": {\n                \"id\": 3,\n                \"name\": \"Gideon Leannon\",\n                \"bio\": \"Sit asperiores tempore ducimus nisi accusantium non maxime. Id iste eaque error necessitatibus sapiente. Odio architecto fuga eum. Unde doloribus laboriosam minus dolor quas enim.\",\n                \"nationality\": \"New Zealand\",\n                \"born_year\": 1990\n            }\n        },\n        {\n            \"id\": 28,\n            \"title\": \"Omnis debitis ducimus est.\",\n            \"isbn\": \"9788495845566\",\n            \"genre\": \"sit\",\n            \"published_year\": 1972,\n            \"total_copies\": 8,\n            \"author\": {\n                \"id\": 3,\n                \"name\": \"Gideon Leannon\",\n                \"bio\": \"Sit asperiores tempore ducimus nisi accusantium non maxime. Id iste eaque error necessitatibus sapiente. Odio architecto fuga eum. Unde doloribus laboriosam minus dolor quas enim.\",\n                \"nationality\": \"New Zealand\",\n                \"born_year\": 1990\n            }\n        },\n        {\n            \"id\": 29,\n            \"title\": \"Non quasi ut.\",\n            \"isbn\": \"9781767036815\",\n            \"genre\": \"at\",\n            \"published_year\": 2014,\n            \"total_copies\": 18,\n            \"author\": {\n                \"id\": 6,\n                \"name\": \"Miss Michele King Sr.\",\n                \"bio\": \"Eaque molestiae officiis qui porro doloremque quae voluptatem. Earum expedita modi et iure.\",\n                \"nationality\": \"Qatar\",\n                \"born_year\": 2014\n            }\n        },\n        {\n            \"id\": 30,\n            \"title\": \"Ea atque vero praesentium.\",\n            \"isbn\": \"9787939226312\",\n            \"genre\": \"placeat\",\n            \"published_year\": 2012,\n            \"total_copies\": 19,\n            \"author\": {\n                \"id\": 1,\n                \"name\": \"J.K. Rowling Updated\",\n                \"bio\": \"British author updated\",\n                \"nationality\": \"British\",\n                \"born_year\": 1965\n            }\n        },\n        {\n            \"id\": 1,\n            \"title\": \"Odit distinctio.\",\n            \"isbn\": \"9787582166881\",\n            \"genre\": \"ut\",\n            \"published_year\": 2023,\n            \"total_copies\": 8,\n            \"author\": {\n                \"id\": 10,\n                \"name\": \"Kayleigh Murray\",\n                \"bio\": \"Fuga excepturi placeat sit odit et ut vitae. Laboriosam dolores architecto omnis perspiciatis est. Nulla nulla dolores iste ex ea in. Qui rerum provident alias atque sed ut. Quas repellendus nihil dignissimos architecto tempora nihil architecto.\",\n                \"nationality\": \"Belgium\",\n                \"born_year\": 1988\n            }\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://localhost:8000/api/books?page=1\",\n        \"last\": \"http://localhost:8000/api/books?page=3\",\n        \"prev\": null,\n        \"next\": \"http://localhost:8000/api/books?page=2\"\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 3,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"page\": null,\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/books?page=1\",\n                \"label\": \"1\",\n                \"page\": 1,\n                \"active\": true\n            },\n            {\n                \"url\": \"http://localhost:8000/api/books?page=2\",\n                \"label\": \"2\",\n                \"page\": 2,\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/books?page=3\",\n                \"label\": \"3\",\n                \"page\": 3,\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/books?page=2\",\n                \"label\": \"Next &raquo;\",\n                \"page\": 2,\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://localhost:8000/api/books\",\n        \"per_page\": 10,\n        \"to\": 10,\n        \"total\": 30\n    },\n    \"success\": true,\n    \"message\": \"Books retrieved successfully\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Create Book",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"author_id\": 1,\n    \"title\": \"Harry Potter and the Sorcerer's Stone\",\n    \"isbn\": \"978-0439708180\",\n    \"genre\": \"Fantasy\",\n    \"published_year\": 1997,\n    \"total_copies\": 5\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/books",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "books"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Create Book",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"author_id\": 1,\n    \"title\": \"Harry Potter and the Sorcerer's Stone\",\n    \"isbn\": \"978-0439708180\",\n    \"genre\": \"Fantasy\",\n    \"published_year\": 1997,\n    \"total_copies\": 5\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/books",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "books"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.19"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Apr 2026 07:08:13 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"data\": {\n        \"id\": 31,\n        \"title\": \"Harry Potter and the Sorcerer's Stone\",\n        \"isbn\": \"978-0439708180\",\n        \"genre\": \"Fantasy\",\n        \"published_year\": 1997,\n        \"total_copies\": 5,\n        \"author\": {\n            \"id\": 1,\n            \"name\": \"J.K. Rowling Updated\",\n            \"bio\": \"British author updated\",\n            \"nationality\": \"British\",\n            \"born_year\": 1965\n        }\n    },\n    \"success\": true,\n    \"message\": \"Book created successfully\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get Book",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/books/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "books",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get Book",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/books/1",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "books",
+                    "1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.19"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Apr 2026 07:08:47 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"Odit distinctio.\",\n        \"isbn\": \"9787582166881\",\n        \"genre\": \"ut\",\n        \"published_year\": 2023,\n        \"total_copies\": 8,\n        \"author\": {\n            \"id\": 10,\n            \"name\": \"Kayleigh Murray\",\n            \"bio\": \"Fuga excepturi placeat sit odit et ut vitae. Laboriosam dolores architecto omnis perspiciatis est. Nulla nulla dolores iste ex ea in. Qui rerum provident alias atque sed ut. Quas repellendus nihil dignissimos architecto tempora nihil architecto.\",\n            \"nationality\": \"Belgium\",\n            \"born_year\": 1988\n        }\n    },\n    \"success\": true,\n    \"message\": \"Book retrieved successfully\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update Book",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"author_id\": 1,\n    \"title\": \"Harry Potter and the Sorcerer's Stone Updated\",\n    \"isbn\": \"978-0439708180\",\n    \"genre\": \"Fantasy\",\n    \"published_year\": 1997,\n    \"total_copies\": 10\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/books/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "books",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update Book",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"author_id\": 1,\n    \"title\": \"Harry Potter and the Sorcerer's Stone Updated\",\n    \"isbn\": \"978-0439708180\",\n    \"genre\": \"Fantasy\",\n    \"published_year\": 1997,\n    \"total_copies\": 10\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/books/1",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "books",
+                    "1"
+                  ]
+                }
+              },
+              "status": "Unprocessable Content",
+              "code": 422,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.19"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Apr 2026 07:09:10 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"message\": \"Validation Error\",\n    \"errors\": {\n        \"isbn\": [\n            \"The isbn has already been taken.\"\n        ]\n    }\n}"
+            },
+            {
+              "name": "Update Book",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"author_id\": 1,\n    \"title\": \"Harry Potter and the Sorcerer's Stone Updated\",\n    \"isbn\": \"978-0439708181\",\n    \"genre\": \"Fantasy\",\n    \"published_year\": 1997,\n    \"total_copies\": 10\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/books/6",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "books",
+                    "6"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.19"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Apr 2026 07:09:58 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"data\": {\n        \"id\": 6,\n        \"title\": \"Harry Potter and the Sorcerer's Stone Updated\",\n        \"isbn\": \"978-0439708181\",\n        \"genre\": \"Fantasy\",\n        \"published_year\": 1997,\n        \"total_copies\": 10,\n        \"author\": {\n            \"id\": 1,\n            \"name\": \"J.K. Rowling Updated\",\n            \"bio\": \"British author updated\",\n            \"nationality\": \"British\",\n            \"born_year\": 1965\n        }\n    },\n    \"success\": true,\n    \"message\": \"Book updated successfully\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete Book",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/books/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "books",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Delete Book",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/books/1",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "books",
+                    "1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.19"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Apr 2026 07:10:24 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Book deleted successfully\",\n    \"data\": []\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Borrows",
+      "item": [
+        {
+          "name": "Borrow a Book",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"book_id\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/borrows",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "borrows"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Borrow a Book",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"book_id\": 5\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/borrows",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "borrows"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.19"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Apr 2026 07:14:07 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"data\": {\n        \"id\": 1,\n        \"book\": {\n            \"id\": 5,\n            \"title\": \"Voluptas incidunt voluptates veritatis.\",\n            \"isbn\": \"9796494645292\",\n            \"genre\": \"neque\",\n            \"published_year\": 2024,\n            \"total_copies\": 7\n        },\n        \"user_id\": 1,\n        \"borrowed_at\": \"2026-04-28T07:14:07.000000Z\",\n        \"due_date\": \"2026-05-05T00:00:00.000000Z\",\n        \"returned_at\": null\n    },\n    \"success\": true,\n    \"message\": \"Book borrowed successfully\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "My Borrow History",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/borrows/my",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "borrows",
+                "my"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "My Borrow History",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/borrows/my",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "borrows",
+                    "my"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.19"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Apr 2026 07:14:29 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"book\": {\n                \"id\": 5,\n                \"title\": \"Voluptas incidunt voluptates veritatis.\",\n                \"isbn\": \"9796494645292\",\n                \"genre\": \"neque\",\n                \"published_year\": 2024,\n                \"total_copies\": 7\n            },\n            \"user_id\": 1,\n            \"borrowed_at\": \"2026-04-28T07:14:07.000000Z\",\n            \"due_date\": \"2026-05-05T00:00:00.000000Z\",\n            \"returned_at\": null\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://localhost:8000/api/borrows/my?page=1\",\n        \"last\": \"http://localhost:8000/api/borrows/my?page=1\",\n        \"prev\": null,\n        \"next\": null\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 1,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"page\": null,\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/borrows/my?page=1\",\n                \"label\": \"1\",\n                \"page\": 1,\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"page\": null,\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://localhost:8000/api/borrows/my\",\n        \"per_page\": 10,\n        \"to\": 1,\n        \"total\": 1\n    },\n    \"success\": true,\n    \"message\": \"Borrow history retrieved successfully\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Return Book",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/borrows/1/return",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "borrows",
+                "1",
+                "return"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Return Book",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/borrows/1/return",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "borrows",
+                    "1",
+                    "return"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "localhost:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.19"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 28 Apr 2026 07:14:50 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"data\": {\n        \"id\": 1,\n        \"book\": {\n            \"id\": 5,\n            \"title\": \"Voluptas incidunt voluptates veritatis.\",\n            \"isbn\": \"9796494645292\",\n            \"genre\": \"neque\",\n            \"published_year\": 2024,\n            \"total_copies\": 7\n        },\n        \"user_id\": 1,\n        \"borrowed_at\": \"2026-04-28T07:14:07.000000Z\",\n        \"due_date\": \"2026-05-05T00:00:00.000000Z\",\n        \"returned_at\": \"2026-04-28T07:14:50.000000Z\"\n    },\n    \"success\": true,\n    \"message\": \"Book returned successfully\"\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8000/api"
+    },
+    {
+      "key": "token",
+      "value": "YOUR_TOKEN_HERE"
+    }
+  ]
+}
